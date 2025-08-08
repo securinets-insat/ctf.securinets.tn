@@ -1,92 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Securinets Quals CTF 2026 | Securinets INSAT</title>
-    <meta name="description" content="Securinets Quals CTF 2026 by Securinets INSAT. Join a world‑class cybersecurity competition across web, reverse engineering, and pwn." />
-    <meta name="author" content="Securinets INSAT" />
-    <link rel="canonical" href="https://securinets-quals-2026.example.com/" />
+<html lang="en">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Securinets Quals CTF 2026 | Securinets INSAT" />
-    <meta property="og:description" content="Join a world‑class cybersecurity competition. Play, learn, and compete with the best." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Securinets CTF Quals 2025 | Securinets INSAT</title>
+  <meta name="description"
+    content="Join Securinets CTF Quals 2025 — a thrilling, global cybersecurity competition spanning a wide range of challenge categories. Compete, learn, and push your skills to the next level." />
+  <meta name="author" content="Securinets INSAT" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://ctf.securinets.tn/" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@securinets" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Securinets CTF Quals 2025 | Securinets INSAT" />
+  <meta property="og:description"
+    content="Global cybersecurity competition across diverse categories. Play, learn, and compete with the best." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ctf.securinets.tn/" />
+  <meta property="og:site_name" content="Securinets INSAT" />
+  <meta property="og:image" content="/og.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@securinets" />
+  <meta name="twitter:image" content="/og.png" />
 
-    <!-- Structured Data: Organization -->
-    <script type="application/ld+json">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Initial theme to avoid FOUC -->
+  <script>
+    try {
+      var m = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var c = document.documentElement.classList;
+      if (!c.contains('dark') && !c.contains('light')) c.add(m ? 'dark' : 'light');
+    } catch (e) { }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Securinets INSAT",
-        "url": "https://securinets-quals-2026.example.com/",
+        "url": "https://ctf.securinets.tn/",
         "sameAs": [
-          "https://www.facebook.com/SecurinetsINSAT",
-          "https://twitter.com/securinets",
-          "https://ctftime.org/team/"
+          "https://www.facebook.com/Securinets",
+          "https://x.com/securinets",
+          "https://www.linkedin.com/company/securinets",
+          "https://www.instagram.com/securinets.insat/",
+          "https://ctftime.org/team/5084",
+          "https://ctftime.org/ctf/105"
         ]
       }
     </script>
 
-    <!-- Structured Data: Event -->
-    <script type="application/ld+json">
+  <!-- Structured Data: Event -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Event",
-        "name": "Securinets Quals CTF 2026",
+        "name": "Securinets CTF Quals 2025",
         "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
-        "description": "Online Capture The Flag competition organized by Securinets INSAT featuring web exploitation, reverse engineering, and binary exploitation.",
+        "description": "Securinets CTF Quals 2025 — a global online Capture The Flag competition across diverse categories. Qualifiers are online; finals are onsite.",
         "organizer": {
           "@type": "Organization",
           "name": "Securinets INSAT"
         },
-        "startDate": "2026-01-01T10:00:00Z",
-        "endDate": "2026-01-01T22:00:00Z",
-        "url": "https://ctftime.org/event/",
+        "startDate": "2025-10-04T14:00:00+01:00",
+        "endDate": "2025-10-05T22:00:00+01:00",
+        "url": "https://ctftime.org/event/2884",
         "offers": {
           "@type": "Offer",
-          "url": "https://ctftime.org/event/",
+          "url": "https://ctftime.org/event/2884",
           "price": "0",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock"
         }
       }
     </script>
-  </head>
+</head>
 
-  <body>
-    <!-- Facebook Messenger Chat Plugin (Update page_id below) -->
-    <div id="fb-root"></div>
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute('page_id', 'YOUR_PAGE_ID');
-      chatbox.setAttribute('attribution', 'biz_inbox');
-      window.fbAsyncInit = function() {
-        FB.init({ xfbml: true, version: 'v18.0' });
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+<body>
+  <!-- Facebook Messenger Chat Plugin (Update page_id below) -->
+  <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute('page_id', 'YOUR_PAGE_ID');
+    chatbox.setAttribute('attribution', 'biz_inbox');
+    window.fbAsyncInit = function () {
+      FB.init({ xfbml: true, version: 'v18.0' });
+    };
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

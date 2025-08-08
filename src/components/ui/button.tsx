@@ -19,6 +19,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-glow hover:from-primary/90 hover:to-primary/70",
+        // Brand variants
+        discord: "bg-[#5865F2] text-white hover:bg-[#4752C4]",
+        messenger: "bg-[#0084FF] text-white hover:bg-[#0073E6]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -36,7 +39,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
 
