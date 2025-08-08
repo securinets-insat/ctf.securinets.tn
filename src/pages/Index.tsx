@@ -1,8 +1,22 @@
 import heroImage from "@/assets/hero-securinets-ctf.jpg";
+import gallery1 from "@/assets/gallery1.jpg";
+import gallery2 from "@/assets/gallery2.jpg";
+import gallery3 from "@/assets/gallery3.jpg";
+import gallery4 from "@/assets/gallery4.jpg";
+import gallery5 from "@/assets/gallery5.jpg";
+import gallery6 from "@/assets/gallery6.jpg";
+import team1 from "@/assets/team1.jpg";
+import team2 from "@/assets/team2.jpg";
+import team3 from "@/assets/team3.jpg";
+import team4 from "@/assets/team4.jpg";
+import team5 from "@/assets/team5.jpg";
+import team6 from "@/assets/team6.jpg";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar as CalendarIcon, MapPin, Trophy, Shield, Cpu, Bug, Lock, Globe, ArrowUp, ExternalLink } from "lucide-react";
+import { Calendar as CalendarIcon, MapPin, Trophy, Shield, Cpu, Bug, Lock, Globe, ArrowUp, ExternalLink, Images, Sparkles, Twitter, Github, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -29,6 +43,8 @@ const Index = () => {
           <div className="hidden md:flex items-center gap-6 text-sm">
             <a href="#about" className="story-link">About</a>
             <a href="#tracks" className="story-link">Categories</a>
+            <a href="#gallery" className="story-link">Gallery</a>
+            <a href="#team" className="story-link">Team</a>
             <a href="#schedule" className="story-link">Schedule</a>
             <a href="#location" className="story-link">Location</a>
             <a href="#sponsors" className="story-link">Sponsors</a>
@@ -55,12 +71,13 @@ const Index = () => {
           <div className="absolute inset-0 overflow-hidden">
             <img src={heroImage} alt="Dark red futuristic CTF background" className="w-full h-[70vh] object-cover opacity-70" loading="eager" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/60 to-background" />
+            <AnimatedBackground />
           </div>
           <div className="container mx-auto relative z-10 px-4 py-20 md:py-28 min-h-[60vh] flex items-center">
             <div className="max-w-3xl animate-enter">
               <Badge className="mb-4 bg-primary/15 text-primary ring-1 ring-primary/30">Online • Global</Badge>
               <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-                Securinets Quals CTF 2026
+                Securinets Quals CTF 2026 ⚔️
               </h1>
               <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
                 A premium, competitive and educational cybersecurity challenge by Securinets INSAT. Solve tasks in web exploitation, reverse engineering, binary exploitation, and more.
@@ -68,7 +85,7 @@ const Index = () => {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button variant="hero" asChild>
                   <a href={discordInvite} target="_blank" rel="noopener noreferrer">
-                    Join the Discord
+                    <Sparkles className="h-4 w-4" /> Join the Discord
                   </a>
                 </Button>
                 <Button variant="secondary" asChild>
@@ -237,6 +254,65 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Gallery */}
+        <section id="gallery" className="container mx-auto px-4 py-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-display font-semibold flex items-center justify-center gap-2"><Images className="h-6 w-6 text-primary" /> Gallery <span className="text-base">📸</span></h2>
+            <p className="text-muted-foreground mt-2">Highlights from past Securinets events and CTFs.</p>
+          </div>
+          <div className="relative">
+            <Carousel opts={{ align: "start", loop: true }}>
+              <CarouselContent>
+                {[gallery1, gallery2, gallery3, gallery4, gallery5, gallery6].map((src, idx) => (
+                  <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="group relative overflow-hidden rounded-lg ring-1 ring-border">
+                      <img src={src} alt={`Securinets event photo ${idx + 1}`} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="-left-6" />
+              <CarouselNext className="-right-6" />
+            </Carousel>
+          </div>
+        </section>
+
+        {/* Technical Team */}
+        <section id="team" className="container mx-auto px-4 py-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-display font-semibold">Technical Team (Authors) 🛠️</h2>
+            <p className="text-muted-foreground mt-2">Meet the minds crafting challenges and ensuring a smooth experience.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { img: team1, name: 'Author One', role: 'Web / Infra', twitter: '#', github: '#', linkedin: '#' },
+              { img: team2, name: 'Author Two', role: 'Pwn / RE', twitter: '#', github: '#', linkedin: '#' },
+              { img: team3, name: 'Author Three', role: 'Crypto', twitter: '#', github: '#', linkedin: '#' },
+              { img: team4, name: 'Author Four', role: 'Forensics', twitter: '#', github: '#', linkedin: '#' },
+              { img: team5, name: 'Author Five', role: 'Misc / QA', twitter: '#', github: '#', linkedin: '#' },
+              { img: team6, name: 'Author Six', role: 'Design / Ops', twitter: '#', github: '#', linkedin: '#' },
+            ].map((m) => (
+              <Card key={m.name} className="overflow-hidden">
+                <div className="aspect-square overflow-hidden">
+                  <img src={m.img} alt={`${m.name} – ${m.role}`} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl">{m.name}</CardTitle>
+                  <CardDescription>{m.role}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-3">
+                    <a href={m.twitter} aria-label={`${m.name} on Twitter`} className="story-link"><Twitter className="h-4 w-4" /></a>
+                    <a href={m.github} aria-label={`${m.name} on GitHub`} className="story-link"><Github className="h-4 w-4" /></a>
+                    <a href={m.linkedin} aria-label={`${m.name} on LinkedIn`} className="story-link"><Linkedin className="h-4 w-4" /></a>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Sponsors */}
         <section id="sponsors" className="container mx-auto px-4 py-16">
           <div className="text-center mb-8">
@@ -245,17 +321,21 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="h-20 rounded-md border border-border bg-card/40 flex items-center justify-center text-muted-foreground hover-scale">
-                Your logo
+              <div key={i} className="p-[1px] rounded-md bg-gradient-to-r from-primary/30 via-accent/20 to-primary/30">
+                <div className="h-20 rounded-[6px] border border-border bg-card/60 flex items-center justify-center text-muted-foreground hover-scale">
+                  Your logo here
+                </div>
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center flex flex-col items-center gap-3">
             <Button variant="hero" asChild>
               <a href="mailto:sponsorships@securinets.org?subject=Sponsorship%20Inquiry%20-%20Securinets%20Quals%202026">Become a Sponsor</a>
             </Button>
+            <a className="story-link text-sm" href="mailto:sponsorships@securinets.org?subject=Sponsor%20Kit%20Request">Request sponsor kit</a>
           </div>
         </section>
+
 
         {/* Contact */}
         <section id="contact" className="container mx-auto px-4 py-16">
@@ -286,6 +366,7 @@ const Index = () => {
             <a href={discordInvite} target="_blank" rel="noopener noreferrer" className="story-link">Discord</a>
           </div>
         </div>
+        <div className="text-center text-xs text-muted-foreground pb-8 px-4">Developed with ❤️ by Jihed Kdiss @ Securinets INSAT</div>
       </footer>
 
       {/* Back to top */}
