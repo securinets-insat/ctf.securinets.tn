@@ -56,7 +56,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border">
         <nav className="container mx-auto flex items-center justify-between h-16 px-4">
           <a href="#hero" className="flex items-center gap-3 hover-scale">
-            <div className="h-8 w-8 rounded-md bg-primary/20 ring-1 ring-primary/30 shadow-glow" />
+            <img src="https://media.securinets.tn/logo.svg" alt="Securinets INSAT" className="h-8 w-8" loading="eager" decoding="async" />
             <span className="font-display text-lg font-semibold">Securinets INSAT</span>
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm">
@@ -203,9 +203,8 @@ const Index = () => {
 
           <div className="mt-6 text-center flex flex-col items-center gap-3">
             <Button variant="hero" asChild>
-              <a href="mailto:sponsorships@securinets.org?subject=Sponsorship%20Inquiry%20-%20Securinets%20CTF%20Quals%202025">Become a Sponsor</a>
+              <a href="mailto:securinets@insat.ucar.tn?subject=Sponsorship%20Inquiry%20-%20Securinets%20CTF%20Quals%202025">Become a Sponsor</a>
             </Button>
-            <a className="story-link text-sm" href="mailto:sponsorships@securinets.org?subject=Sponsor%20Kit%20Request">Request sponsor kit</a>
           </div>
         </section>
 
@@ -270,37 +269,101 @@ const Index = () => {
 
         {/* Schedule & Calendar */}
         <section id="schedule" className="section">
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-display font-semibold flex items-center justify-center gap-2">
+              <CalendarIcon className="h-6 w-6 text-primary" /> Schedule & Important Dates
+            </h2>
+            <p className="text-muted-foreground mt-2">Mark your calendar for this exciting cybersecurity competition</p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {/* Main Schedule Card */}
+            <Card className="lg:col-span-2">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2"><CalendarIcon className="h-5 w-5 text-primary" /> Schedule</CardTitle>
-                <CardDescription>Sat, 04 Oct 2025, 14:00 CET — Sun, 05 Oct 2025, 22:00 CET (Quals online)</CardDescription>
+                <CardTitle className="flex items-center gap-2">
+                  <CalendarIcon className="h-5 w-5 text-primary" />
+                  Competition Schedule
+                </CardTitle>
+                <CardDescription>All times in Central European Time (CET)</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-wrap gap-3 items-center">
-                <Button variant="hero" asChild>
-                  <a href={googleCalendarLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    {/* Google Calendar logo */}
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden><path fill="#1967D2" d="M6 2h12a2 2 0 0 1 2 2v4H4V4a2 2 0 0 1 2-2Z" /><path fill="#EA4335" d="M20 22H6a2 2 0 0 1-2-2v-8h18v8a2 2 0 0 1-2 2Z" /><path fill="#34A853" d="M2 8h20v4H2z" /><path fill="#FBBC04" d="M8 2h2v4H8zM14 2h2v4h-2z" /></svg>
-                    Add to Google Calendar
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="#tracks">Explore categories</a>
-                </Button>
+              <CardContent className="space-y-6">
+                {/* Qualifiers */}
+                <div className="border-l-4 border-primary pl-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-lg">Qualifiers (Online)</h3>
+                    <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30">Online</Badge>
+                  </div>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <CalendarIcon className="h-4 w-4" />
+                      <span>Saturday, October 4, 2025</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-4 flex items-center justify-center">🕐</span>
+                      <span>14:00 CET - 22:00 CET (8 hours)</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Finals */}
+                <div className="border-l-4 border-accent pl-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-lg">Finals (Onsite)</h3>
+                    <Badge variant="outline" className="bg-accent/10 text-accent border-accent/30">Onsite</Badge>
+                  </div>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <CalendarIcon className="h-4 w-4" />
+                      <span>Sunday, October 5, 2025</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-4 flex items-center justify-center">🕐</span>
+                      <span>Time TBA</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      <span>INSAT, Tunis, Tunisia</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-wrap gap-3 pt-4">
+                  <Button variant="hero" asChild>
+                    <a href={googleCalendarLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <CalendarIcon className="h-4 w-4" />
+                      Add to Calendar
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <a href={ctftimeLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <img src="https://ctftime.org/favicon.png" alt="" className="h-4 w-4" loading="lazy" decoding="async" />
+                      View on CTFtime
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
+            {/* Visual Calendar */}
             <Card>
               <CardHeader>
                 <CardTitle className="font-display">Event Calendar</CardTitle>
-                <CardDescription>Mark your dates — 4–5 October 2025</CardDescription>
+                <CardDescription>October 2025</CardDescription>
               </CardHeader>
               <CardContent>
                 <Calendar
                   mode="range"
                   defaultMonth={new Date(2025, 9, 1)}
                   selected={{ from: new Date(2025, 9, 4), to: new Date(2025, 9, 5) }}
+                  className="rounded-md border"
                 />
+                <div className="mt-4 space-y-2 text-xs">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-primary"></div>
+                    <span className="text-muted-foreground">Competition Days</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -473,7 +536,7 @@ const Index = () => {
             <CardContent className="py-8 grid md:grid-cols-2 gap-6">
               <div>
                 <div className="text-sm text-muted-foreground mb-2">Email</div>
-                <a href="mailto:contact@securinets.org" className="story-link">contact@securinets.org</a>
+                <a href="mailto:securinets@insat.ucar.tn" className="story-link">securinets@insat.ucar.tn</a>
               </div>
               <div>
                 <div className="text-sm text-muted-foreground mb-2">Discord</div>
@@ -491,7 +554,7 @@ const Index = () => {
 
       <footer className="border-t border-border">
         <div className="container mx-auto px-4 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>© {new Date().getFullYear()} Securinets INSAT • Securinets CTF Quals 2025</div>
+          <div>© {new Date().getFullYear()} Securinets INSAT • Developed by <a href="https://jihedkdiss.tn" target="_blank" className="story-link"><b>Jihed Kdiss</b></a></div>
           <div className="flex items-center gap-4">
             <a href={ctftimeLink} target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1"><img src="https://ctftime.org/favicon.png" alt="" className="h-4 w-4" loading="lazy" decoding="async" /> CTFtime</a>
             <a href={discordInvite} target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1">
@@ -499,12 +562,11 @@ const Index = () => {
               Discord
             </a>
             <a href="https://www.facebook.com/Securinets" target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1"><Facebook className="h-4 w-4" /> Facebook</a>
-            <a href="https://x.com/securinets" target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1"><Twitter className="h-4 w-4" /> X</a>
+            <a href="https://x.com/securinets" target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1"><Twitter className="h-4 w-4" /> Twitter</a>
             <a href="https://www.linkedin.com/company/securinets" target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1"><Linkedin className="h-4 w-4" /> LinkedIn</a>
             <a href="https://www.instagram.com/securinets.insat/" target="_blank" rel="noopener noreferrer" className="story-link flex items-center gap-1"><Instagram className="h-4 w-4" /> Instagram</a>
           </div>
         </div>
-        <div className="text-center text-xs text-muted-foreground pb-8 px-4">Developed by Securinets INSAT</div>
       </footer>
 
       {/* Back to top - now circular */}
