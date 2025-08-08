@@ -21,12 +21,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ctf.securinets.tn/" />
   <meta property="og:site_name" content="Securinets INSAT" />
-  <meta property="og:image" content="/og.png" />
+  <meta property="og:image" content="https://media.securinets.tn/cover.jpg" />
 
   <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@securinets" />
-  <meta name="twitter:image" content="/og.png" />
+  <meta name="twitter:image" content="https://media.securinets.tn/cover.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,25 +90,6 @@
 </head>
 
 <body>
-  <!-- Facebook Messenger Chat Plugin (Update page_id below) -->
-  <div id="fb-root"></div>
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute('page_id', 'YOUR_PAGE_ID');
-    chatbox.setAttribute('attribution', 'biz_inbox');
-    window.fbAsyncInit = function () {
-      FB.init({ xfbml: true, version: 'v18.0' });
-    };
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

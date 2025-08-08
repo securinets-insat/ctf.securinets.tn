@@ -5,9 +5,9 @@ import gallery3 from "@/assets/gallery3.jpg";
 import gallery4 from "@/assets/gallery4.jpg";
 import gallery5 from "@/assets/gallery5.jpg";
 import gallery6 from "@/assets/gallery6.jpg";
-import team1 from "@/assets/team1.jpg";
-import team2 from "@/assets/team2.jpg";
-import team3 from "@/assets/team3.jpg";
+import team1 from "@/assets/luffy.jpg";
+import team2 from "@/assets/jihed.jpg";
+import team3 from "@/assets/Abid.png";
 import team4 from "@/assets/team4.jpg";
 import team5 from "@/assets/team5.jpg";
 import team6 from "@/assets/team6.jpg";
@@ -136,9 +136,8 @@ const Index = () => {
           </div>
           <div className="section relative z-10 min-h-[56vh] flex items-center">
             <div className="max-w-3xl animate-enter">
-              <Badge className="mb-4 bg-primary/15 text-primary ring-1 ring-primary/30">Online • Global</Badge>
               <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-                Securinets CTF Quals 2025
+                Securinets CTF<br></br>Quals 2025
               </h1>
               <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
                 A thrilling, global cybersecurity competition spanning diverse challenge categories. Compete, learn, and push your skills to the next level.
@@ -155,13 +154,8 @@ const Index = () => {
                     <img src="https://ctftime.org/favicon.png" alt="" className="h-4 w-4" loading="lazy" decoding="async" /> Register on CTFtime
                   </a>
                 </Button>
-                <Button variant="outline" asChild>
-                  <a href="#about">Learn more</a>
-                </Button>
               </div>
               <div className="mt-5 flex items-center gap-6 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-primary" /><span>Prizes & swag</span></div>
-                <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-primary" /><span>Beginner → Advanced tracks</span></div>
                 <div className="flex items-center gap-2"><CalendarIcon className="h-4 w-4 text-primary" /><span>Oct 4–5, 2025 • CET</span></div>
               </div>
             </div>
@@ -464,29 +458,79 @@ const Index = () => {
             <h2 className="text-3xl font-display font-semibold flex items-center justify-center gap-2"><Images className="h-6 w-6 text-primary" /> Gallery</h2>
             <p className="text-muted-foreground mt-2">Highlights from past Securinets events and CTFs.</p>
           </div>
-          <div className="relative">
-            <Carousel opts={{ align: "start", loop: true }}>
-              <CarouselContent>
-                {gallery.map((src, idx) => (
-                  <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
-                    <button
-                      onClick={() => setLightbox({ src, title: `Securinets event photo ${idx + 1}` })}
-                      className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
-                    >
-                      <img src={src} alt={`Securinets event photo ${idx + 1}`} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
-                          {`Securinets event photo ${idx + 1}`}
-                        </div>
-                      </div>
-                    </button>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="-left-6" />
-              <CarouselNext className="-right-6" />
-            </Carousel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <button
+              onClick={() => setLightbox({ src: gallery1, title: "Securinets event photo 1" })}
+              className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
+            >
+              <img src={gallery1} alt="Securinets event photo 1" className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
+                  Securiday XVII 1st Place Winners
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setLightbox({ src: gallery2, title: "Darkest Hour CTF 2024" })}
+              className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
+            >
+              <img src={gallery2} alt="Securinets event photo 2" className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
+                  Darkest Hour CTF 2024
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setLightbox({ src: gallery3, title: "Securinets event photo 3" })}
+              className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
+            >
+              <img src={gallery3} alt="Securinets event photo 3" className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
+                  Competition highlights
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setLightbox({ src: gallery4, title: "Securinets event photo 4" })}
+              className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
+            >
+              <img src={gallery4} alt="Securinets event photo 4" className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
+                  Workshop session
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setLightbox({ src: gallery5, title: "Securinets event photo 5" })}
+              className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
+            >
+              <img src={gallery5} alt="Securinets event photo 5" className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
+                  Team collaboration
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setLightbox({ src: gallery6, title: "Securinets event photo 6" })}
+              className="group relative overflow-hidden rounded-lg ring-1 ring-border w-full"
+            >
+              <img src={gallery6} alt="Securinets event photo 6" className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="inline-flex items-center rounded-md bg-background/80 px-2 py-1 text-xs ring-1 ring-border">
+                  Award ceremony
+                </div>
+              </div>
+            </button>
           </div>
 
           <Dialog open={!!lightbox} onOpenChange={(o) => !o && setLightbox(null)}>
@@ -508,25 +552,108 @@ const Index = () => {
             <p className="text-muted-foreground mt-2">Meet the minds crafting challenges and ensuring a smooth experience.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Card key={i} className="overflow-hidden">
-                <div className="aspect-square overflow-hidden">
-                  <img src={team1} alt={`Author ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+            <Card className="overflow-hidden">
+              <div className="aspect-square overflow-hidden">
+                <img src="https://buddurid.me/assets/images/luffy.jpg" alt="Bahae Bahrini" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Bahae Bahrini</CardTitle>
+                <CardDescription>Technical Team Director</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <a href="#" aria-label="Author 1 website" className="story-link"><Globe className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on Twitter/X" className="story-link"><Twitter className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on GitHub" className="story-link"><Github className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on LinkedIn" className="story-link"><Linkedin className="h-4 w-4" /></a>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-xl">Author {i + 1}</CardTitle>
-                  <CardDescription>Role {i + 1}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-3">
-                    <a href="#" aria-label={`Author ${i + 1} website`} className="story-link"><Globe className="h-4 w-4" /></a>
-                    <a href="#" aria-label={`Author ${i + 1} on Twitter/X`} className="story-link"><Twitter className="h-4 w-4" /></a>
-                    <a href="#" aria-label={`Author ${i + 1} on GitHub`} className="story-link"><Github className="h-4 w-4" /></a>
-                    <a href="#" aria-label={`Author ${i + 1} on LinkedIn`} className="story-link"><Linkedin className="h-4 w-4" /></a>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden">
+              <div className="aspect-square overflow-hidden">
+                <img src={team2} alt="Jihed Kdiss" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Jihed Kdiss</CardTitle>
+                <CardDescription>Reverse Engineering & CTFd</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <a href="#" aria-label="Author 1 website" className="story-link"><Globe className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on Twitter/X" className="story-link"><Twitter className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on GitHub" className="story-link"><Github className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on LinkedIn" className="story-link"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden">
+              <div className="aspect-square overflow-hidden">
+                <img src={team3} alt="Youssef Abid" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Youssef Abid</CardTitle>
+                <CardDescription>Ex-Technical Director</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <a href="#" aria-label="Author 1 website" className="story-link"><Globe className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on Twitter/X" className="story-link"><Twitter className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on GitHub" className="story-link"><Github className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on LinkedIn" className="story-link"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden">
+              <div className="aspect-square overflow-hidden">
+                <img src={team1} alt="Author 1" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Author 1</CardTitle>
+                <CardDescription>Role 1</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <a href="#" aria-label="Author 1 website" className="story-link"><Globe className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on Twitter/X" className="story-link"><Twitter className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on GitHub" className="story-link"><Github className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on LinkedIn" className="story-link"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden">
+              <div className="aspect-square overflow-hidden">
+                <img src={team1} alt="Author 1" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Author 1</CardTitle>
+                <CardDescription>Role 1</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <a href="#" aria-label="Author 1 website" className="story-link"><Globe className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on Twitter/X" className="story-link"><Twitter className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on GitHub" className="story-link"><Github className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on LinkedIn" className="story-link"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden">
+              <div className="aspect-square overflow-hidden">
+                <img src={team1} alt="Author 1" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">Author 1</CardTitle>
+                <CardDescription>Role 1</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3">
+                  <a href="#" aria-label="Author 1 website" className="story-link"><Globe className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on Twitter/X" className="story-link"><Twitter className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on GitHub" className="story-link"><Github className="h-4 w-4" /></a>
+                  <a href="#" aria-label="Author 1 on LinkedIn" className="story-link"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
