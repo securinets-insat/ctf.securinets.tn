@@ -1,23 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>securinets-red-spectacle</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Securinets Quals CTF 2026 | Securinets INSAT</title>
+    <meta name="description" content="Securinets Quals CTF 2026 by Securinets INSAT. Join a world‑class cybersecurity competition across web, reverse engineering, and pwn." />
+    <meta name="author" content="Securinets INSAT" />
+    <link rel="canonical" href="https://securinets-quals-2026.example.com/" />
 
-    <meta property="og:title" content="securinets-red-spectacle" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Securinets Quals CTF 2026 | Securinets INSAT" />
+    <meta property="og:description" content="Join a world‑class cybersecurity competition. Play, learn, and compete with the best." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:site" content="@securinets" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Securinets INSAT",
+        "url": "https://securinets-quals-2026.example.com/",
+        "sameAs": [
+          "https://www.facebook.com/SecurinetsINSAT",
+          "https://twitter.com/securinets",
+          "https://ctftime.org/team/"
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: Event -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Securinets Quals CTF 2026",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "description": "Online Capture The Flag competition organized by Securinets INSAT featuring web exploitation, reverse engineering, and binary exploitation.",
+        "organizer": {
+          "@type": "Organization",
+          "name": "Securinets INSAT"
+        },
+        "startDate": "2026-01-01T10:00:00Z",
+        "endDate": "2026-01-01T22:00:00Z",
+        "url": "https://ctftime.org/event/",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ctftime.org/event/",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
   </head>
 
   <body>
+    <!-- Facebook Messenger Chat Plugin (Update page_id below) -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute('page_id', 'YOUR_PAGE_ID');
+      chatbox.setAttribute('attribution', 'biz_inbox');
+      window.fbAsyncInit = function() {
+        FB.init({ xfbml: true, version: 'v18.0' });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
