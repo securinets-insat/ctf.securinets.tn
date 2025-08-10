@@ -7,22 +7,26 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "@/components/CustomCursor";
 import { ThemeProvider } from "next-themes";
+import GlobalBackground from "@/components/GlobalBackground";
+import ForegroundOverlay from "@/components/ForegroundOverlay";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <GlobalBackground />
           <CustomCursor />
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <ForegroundOverlay />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
