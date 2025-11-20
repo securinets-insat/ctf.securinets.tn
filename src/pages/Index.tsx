@@ -328,11 +328,11 @@ const Index = () => {
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <CalendarIcon className="h-4 w-4" />
-                      <span>Date TBA</span>
+                      <span>Sunday, November 16, 2025</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="w-4 h-4 flex items-center justify-center">🕐</span>
-                      <span>Time TBA</span>
+                      <span>11:00 AM GMT+1</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="h-4 w-4" />
