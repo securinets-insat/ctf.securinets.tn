@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { CalendarIcon, Clock } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 interface TimeLeft {
   days: number;
@@ -27,7 +26,6 @@ const Countdown = ({
 }: CountdownProps) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [prevTimeLeft, setPrevTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [isExpired, setIsExpired] = useState(false);
   const [activeUnit, setActiveUnit] = useState<string | null>(null);
 
   useEffect(() => {
@@ -45,11 +43,9 @@ const Countdown = ({
         const newTimeLeft = { days, hours, minutes, seconds };
         setPrevTimeLeft(timeLeft);
         setTimeLeft(newTimeLeft);
-        setIsExpired(false);
       } else {
         setPrevTimeLeft(timeLeft);
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        setIsExpired(true);
       }
     };
 
@@ -65,25 +61,6 @@ const Countdown = ({
     { label: 'Minutes', value: timeLeft.minutes },
     { label: 'Seconds', value: timeLeft.seconds },
   ];
-
-  if (isExpired) {
-    return (
-      <Card className={`bg-gradient-to-br from-primary/10 via-background/80 to-accent/10 backdrop-blur-sm border-primary/20 ${className}`}>
-        <CardContent className="p-6 text-center">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <CalendarIcon className="h-5 w-5 text-primary" />
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30">
-              Event Started
-            </Badge>
-          </div>
-          <h3 className="text-xl font-semibold text-primary">The Competition is Live!</h3>
-          <p className="text-sm text-muted-foreground mt-1">Good luck to all participants!</p>
-        </CardContent>
-      </Card>
-    );
-  }
-
-
 
   return (
     <Card className={`bg-gradient-to-br from-primary/5 via-background/90 to-accent/5 backdrop-blur-sm border-primary/20 shadow-lg ${className}`}>

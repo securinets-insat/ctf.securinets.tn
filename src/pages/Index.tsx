@@ -47,7 +47,7 @@ const Index = () => {
   }, []);
 
   const googleCalendarLink =
-    "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Securinets+CTF+Quals+2025&dates=20251004T130000Z/20251005T210000Z&ctz=Africa/Tunis&details=Qualifiers+online%2C+finals+onsite.+More%3A+https%3A%2F%2Fctftime.org%2Fevent%2F2884&location=Online";
+    "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Securinets+CTF+Quals+2026&dates=20261003T130000Z/20261004T210000Z&ctz=Africa/Tunis&details=Qualifiers+online%2C+finals+onsite.+More%3A+https%3A%2F%2Fctftime.org%2Fevent%2F2884&location=Online";
   const ctftimeLink = "https://ctftime.org/event/2884";
   const discordInvite = "https://discord.gg/Xqj6WnNmbQ";
   const discordServerId = "558606114565128192";
@@ -66,7 +66,6 @@ const Index = () => {
             <span className="font-display text-lg font-semibold">Securinets INSAT</span>
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#sponsors" className="story-link">Sponsors</a>
             <a href="#about" className="story-link">About</a>
             <a href="#schedule" className="story-link">Schedule</a>
             <a href="#tracks" className="story-link">Categories</a>
@@ -104,7 +103,6 @@ const Index = () => {
                   <ThemeToggle />
                 </div>
                 <div className="mt-6 grid gap-3 text-base">
-                  <a href="#sponsors" className="story-link">Sponsors</a>
                   <a href="#about" className="story-link">About</a>
                   <a href="#schedule" className="story-link">Schedule</a>
                   <a href="#tracks" className="story-link">Categories</a>
@@ -146,7 +144,7 @@ const Index = () => {
               {/* Left: Headline and CTAs */}
               <div className="max-w-2xl animate-enter">
                 <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
-                  Securinets CTF<br></br>Quals 2025
+                  Securinets CTF<br></br>Quals 2026
                 </h1>
                 <p className="mt-4 text-lg md:text-xl text-black dark:text-muted-foreground max-w-2xl drop-shadow-sm">
                   A thrilling, global cybersecurity competition spanning diverse challenge categories. Compete, learn, and push your skills to the next level.
@@ -166,59 +164,19 @@ const Index = () => {
                   </Button>
                 </div>
                 <div className="mt-5 flex items-center gap-6 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2"><CalendarIcon className="h-4 w-4 text-primary" /><span>Oct 4–5, 2025 • CET</span></div>
+                  <div className="flex items-center gap-2"><CalendarIcon className="h-4 w-4 text-primary" /><span>Sat, Oct 3, 2026 • Online</span></div>
                 </div>
               </div>
 
               {/* Right: Countdown */}
               <div className="animate-enter md:justify-self-end w-full md:max-w-md">
                 <Countdown
-                  targetDate={new Date('2025-10-04T13:00:00Z')}
+                  targetDate={new Date('2026-10-03T13:00:00Z')}
                   title="Qualifiers Start In"
-                  subtitle="October 4, 2025 • 14:00 CET"
+                  subtitle="October 3, 2026 • 14:00 CET"
                 />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Sponsors: Gold & Silver */}
-        <section id="sponsors" className="section-tight">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-display font-semibold">Sponsors</h2>
-            <p className="text-muted-foreground mt-2">Support the next generation of security talent. Partner with Securinets.</p>
-          </div>
-
-          <div className="mb-5">
-            <h3 className="text-xl font-semibold mb-3">Gold Sponsors</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="p-[1px] rounded-md bg-gradient-to-r from-amber-400/50 via-yellow-500/40 to-amber-400/50">
-                  <div className="h-20 md:h-24 rounded-[6px] border border-border bg-card/60 flex items-center justify-center text-muted-foreground hover-scale">
-                    Sponsor us
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-3">Silver Sponsors</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className="p-[1px] rounded-md bg-gradient-to-r from-zinc-300/60 via-zinc-400/40 to-zinc-300/60 dark:from-zinc-600/50 dark:via-zinc-500/40 dark:to-zinc-600/50">
-                  <div className="h-16 md:h-20 rounded-[6px] border border-border bg-card/60 flex items-center justify-center text-muted-foreground hover-scale">
-                    Sponsor us
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-6 text-center flex flex-col items-center gap-3">
-            <Button variant="hero" asChild>
-              <a href="mailto:securinets@insat.ucar.tn?subject=Sponsorship%20Inquiry%20-%20Securinets%20CTF%20Quals%202025">Become a Sponsor</a>
-            </Button>
           </div>
         </section>
 
@@ -310,7 +268,7 @@ const Index = () => {
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <CalendarIcon className="h-4 w-4" />
-                      <span>Saturday, October 4, 2025</span>
+                      <span>Saturday, October 3, 2026</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="w-4 h-4 flex items-center justify-center">🕐</span>
@@ -328,7 +286,7 @@ const Index = () => {
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <CalendarIcon className="h-4 w-4" />
-                      <span>Sunday, November 16, 2025</span>
+                      <span>TBA</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="w-4 h-4 flex items-center justify-center">🕐</span>
@@ -363,13 +321,13 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="font-display">Event Calendar</CardTitle>
-                <CardDescription>October 2025</CardDescription>
+                <CardDescription>October 2026</CardDescription>
               </CardHeader>
               <CardContent>
                 <Calendar
                   mode="range"
-                  defaultMonth={new Date(2025, 9, 1)}
-                  selected={{ from: new Date(2025, 9, 4), to: new Date(2025, 9, 5) }}
+                  defaultMonth={new Date(2026, 9, 1)}
+                  selected={{ from: new Date(2026, 9, 3), to: new Date(2026, 9, 4) }}
                   className="rounded-md border"
                 />
                 <div className="mt-4 space-y-2 text-xs">

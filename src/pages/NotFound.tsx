@@ -17,7 +17,7 @@ const NotFound = () => {
         <h1 className="text-4xl font-bold mb-4">404</h1>
         <p className="text-xl text-muted-foreground mb-4">Oops! Page not found</p>
         <a href="/" className="text-primary underline-offset-4 hover:underline">
-          Return to Securinets CTF Quals 2025
+          Return to Securinets CTF Quals 2026
         </a>
       </div>
     </div>
