@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Reveal from "@/components/Reveal";
 import coverImage from "@/assets/hero-bg.jpg";
-import { Star, Clock, ExternalLink, MapPin, Users } from "lucide-react";
+import { Star, Clock, ArrowRight, MapPin, Users } from "lucide-react";
+import { CTF_PLATFORM_URL } from "@/lib/links";
 
 const QUAL = {
   start: new Date("2026-10-17T09:00:00Z"), // Sat, Oct 17, 09:00 UTC
@@ -149,18 +149,11 @@ const Events = () => {
                   {interested ? "Interested ✓" : "Interested"}
                 </Button>
                 <div className="ml-auto">
-                  <Tooltip delayDuration={0}>
-                    <TooltipTrigger asChild>
-                      <span tabIndex={0} className="inline-flex">
-                        <Button variant="hero" size="sm" disabled className="flex cursor-not-allowed items-center gap-2">
-                          Play CTF <ExternalLink className="h-4 w-4" />
-                        </Button>
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent side="top" className="max-w-[240px] text-center">
-                      The arena opens <span className="font-semibold text-primary">Oct 17, 09:00 UTC</span>. See you there.
-                    </TooltipContent>
-                  </Tooltip>
+                  <Button asChild variant="hero" size="sm">
+                    <a href={CTF_PLATFORM_URL} className="flex items-center gap-2">
+                      Play CTF <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>

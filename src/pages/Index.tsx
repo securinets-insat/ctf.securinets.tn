@@ -2,9 +2,11 @@ import heroImage from "@/assets/hero-bg.jpg";
 
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Countdown from "@/components/Countdown";
+import { Button } from "@/components/ui/button";
+import { CTF_PLATFORM_URL } from "@/lib/links";
 import EventsMarquee from "@/components/EventsMarquee";
 import { Link } from "react-router-dom";
-import { BarChart3, Calendar as CalendarIcon, Clock as ClockIcon, Home, Shield, Globe, Images, Users, Mail, LayoutGrid, Trophy } from "lucide-react";
+import { ArrowRight, BarChart3, Calendar as CalendarIcon, Clock as ClockIcon, Home, Shield, Globe, Images, Users, Mail, LayoutGrid, Trophy } from "lucide-react";
 
 const EXPLORE = [
   { to: "/", label: "Home", description: "The front page of this year's edition.", icon: Home },
@@ -39,6 +41,13 @@ const Index = () => {
           <p className="mx-auto mt-5 max-w-xl animate-enter text-base md:text-lg text-black dark:text-muted-foreground drop-shadow-sm">
             A 36-hour online jeopardy-style CTF organized by Securinets INSAT. Top teams qualify for the onsite finals in Tunisia.
           </p>
+
+          <Button asChild variant="hero" size="lg" className="mt-8 animate-enter">
+            <a href={CTF_PLATFORM_URL}>
+              Go To CTF Platform
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
 
           <div className="mt-10 w-full max-w-md shrink-0 animate-enter">
             <Countdown
