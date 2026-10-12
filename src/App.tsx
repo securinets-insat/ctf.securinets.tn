@@ -4,9 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Categories from "./pages/Categories";
 import Schedule from "./pages/Schedule";
-import Events from "./pages/Events";
+import FinalsVenue from "./pages/FinalsVenue";
 import Gallery from "./pages/Gallery";
 import Scoreboard from "./pages/Scoreboard";
 import Podium from "./pages/Podium";
@@ -31,9 +30,8 @@ const App = () => (
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Index />} />
-              <Route path="/categories" element={<Categories />} />
               <Route path="/schedule" element={<Schedule />} />
-              <Route path="/events" element={<Events />} />
+              <Route path="/finals-venue" element={<FinalsVenue />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/scoreboard" element={<Scoreboard />} />
               <Route path="/podium" element={<Podium />} />

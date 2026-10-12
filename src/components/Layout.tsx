@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
 import { DiscordIcon, XIcon } from "@/components/icons";
-import { ArrowUp, BarChart3, CalendarDays, ChevronRight, Facebook, Home, Images, Instagram, Linkedin, LayoutGrid, Mail, Menu, Trophy, Users, CalendarPlus } from "lucide-react";
+import { ArrowRight, ArrowUp, BarChart3, CalendarDays, ChevronRight, Facebook, Home, Images, Instagram, Landmark, Linkedin, Mail, Menu, Trophy, Users } from "lucide-react";
+import { CTF_REGISTER_URL, DISCORD_URL } from "@/lib/links";
 
 const ctftimeLink = "https://ctftime.org/event/3364";
-const discordInvite = "https://discord.gg/Xqj6WnNmbQ";
+const discordInvite = DISCORD_URL;
 
 const NAV = [
   { to: "/", label: "Home", icon: Home },
-  { to: "/categories", label: "Categories", icon: LayoutGrid },
   { to: "/schedule", label: "Schedule", icon: CalendarDays },
-  { to: "/events", label: "Events", icon: CalendarPlus },
+  { to: "/finals-venue", label: "Finals Venue", icon: Landmark },
   { to: "/scoreboard", label: "Scoreboard", icon: BarChart3 },
   { to: "/podium", label: "Last Podium", icon: Trophy },
   { to: "/gallery", label: "Gallery", icon: Images },
@@ -109,6 +109,12 @@ const Layout = () => {
 
         {/* Bottom */}
         <div className="space-y-3 p-4">
+          <Button asChild variant="hero" className="w-full">
+            <a href={CTF_REGISTER_URL} className="flex items-center justify-center gap-2">
+              Register Now
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </Button>
           <Button asChild variant="discord" className="w-full">
             <a href={discordInvite} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
               <DiscordIcon className="h-4 w-4" />
@@ -158,7 +164,13 @@ const Layout = () => {
                     </NavLink>
                   ))}
                 </nav>
-                <div className="mt-6">
+                <div className="mt-6 space-y-3">
+                  <Button asChild variant="hero" className="w-full" onClick={() => setMobileOpen(false)}>
+                    <a href={CTF_REGISTER_URL} className="flex items-center justify-center gap-2">
+                      Register Now
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </a>
+                  </Button>
                   <Button asChild variant="discord" className="w-full" onClick={() => setMobileOpen(false)}>
                     <a href={discordInvite} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                       <DiscordIcon className="h-4 w-4" />

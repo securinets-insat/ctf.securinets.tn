@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Mail, MapPin } from "lucide-react";
 import { DiscordIcon } from "@/components/icons";
 import Reveal from "@/components/Reveal";
+import { DISCORD_URL } from "@/lib/links";
 
-const discordInvite = "https://discord.gg/Xqj6WnNmbQ";
+const discordInvite = DISCORD_URL;
 const discordServerId = "558606114565128192";
 
 const SOCIAL_LINKS = [

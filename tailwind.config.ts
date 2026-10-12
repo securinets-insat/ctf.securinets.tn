@@ -23,8 +23,10 @@ export default {
 				swift: 'cubic-bezier(0.22, 1, 0.36, 1)'
 			},
 			fontFamily: {
+				// same type as the CTFd platform (quals.securinets.tn)
 				sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				display: ['Space Grotesk', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+				display: ['Montserrat', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace']
 			},
 			colors: {
 				border: 'hsl(var(--border))',

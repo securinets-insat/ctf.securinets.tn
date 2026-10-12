@@ -223,7 +223,7 @@ const Team = () => {
               <div className="mt-3 flex flex-1 flex-col border-t border-border pt-3">
                 <p className="font-display text-lg font-semibold leading-tight transition-colors duration-300 group-hover:text-primary">{member.name}</p>
                 <span className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">{member.role}</span>
-                <div className="mt-auto flex items-center justify-between gap-2 pt-3">
+                <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     {member.links.map((link) => (
                       <a

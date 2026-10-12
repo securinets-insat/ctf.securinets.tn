@@ -5,19 +5,10 @@ import Countdown from "@/components/Countdown";
 import { Button } from "@/components/ui/button";
 import { CTF_PLATFORM_URL } from "@/lib/links";
 import EventsMarquee from "@/components/EventsMarquee";
-import { Link } from "react-router-dom";
-import { ArrowRight, BarChart3, Calendar as CalendarIcon, Clock as ClockIcon, Home, Shield, Globe, Images, Users, Mail, LayoutGrid, Trophy } from "lucide-react";
-
-const EXPLORE = [
-  { to: "/", label: "Home", description: "The front page of this year's edition.", icon: Home },
-  { to: "/categories", label: "Categories", description: "Web, pwn, reverse, crypto and more.", icon: LayoutGrid },
-  { to: "/schedule", label: "Schedule", description: "Important dates and the event calendar.", icon: CalendarIcon },
-  { to: "/scoreboard", label: "Scoreboard", description: "Final standings of Quals 2025.", icon: BarChart3 },
-  { to: "/podium", label: "Podium", description: "Who topped the 2025 onsite finals.", icon: Trophy },
-  { to: "/gallery", label: "Gallery", description: "Photos from past Securinets events.", icon: Images },
-  { to: "/team", label: "Team", description: "The people behind the challenges.", icon: Users },
-  { to: "/contact", label: "Contact", description: "Reach us by email or on Discord.", icon: Mail },
-];
+import FinalsTravel from "@/components/FinalsTravel";
+import CategoriesSection from "@/components/CategoriesSection";
+import QualsTicket from "@/components/QualsTicket";
+import { ArrowRight, Calendar as CalendarIcon, Clock as ClockIcon, Shield, Globe } from "lucide-react";
 
 const QUALS_TARGET = new Date('2026-10-17T09:00:00Z');
 const QUALS_DURATION_HOURS = 36; // Oct 17, 09:00 UTC -> Oct 18, 21:00 UTC
@@ -42,12 +33,14 @@ const Index = () => {
             A 36-hour online jeopardy-style CTF organized by Securinets INSAT. Top teams qualify for the onsite finals in Tunisia.
           </p>
 
-          <Button asChild variant="hero" size="lg" className="mt-8 animate-enter">
-            <a href={CTF_PLATFORM_URL}>
-              Go To CTF Platform
-              <ArrowRight aria-hidden="true" />
-            </a>
-          </Button>
+          <div className="mt-8 flex animate-enter flex-wrap items-center justify-center gap-3">
+            <Button asChild variant="hero" size="lg">
+              <a href={CTF_PLATFORM_URL}>
+                Go to Competition Platform
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
+          </div>
 
           <div className="mt-10 w-full max-w-md shrink-0 animate-enter">
             <Countdown
@@ -68,6 +61,12 @@ const Index = () => {
         <hr className="my-4 border-border/50" />
       </div>
 
+      <QualsTicket />
+
+      <FinalsTravel />
+
+      <CategoriesSection />
+
       {/* About */}
       <section id="about" className="section-tight">
         <div className="border-t border-border pt-5">
@@ -83,30 +82,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Explore */}
-      <section id="explore" className="section">
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-display font-semibold">Explore</h2>
-          <p className="text-muted-foreground mt-2">Everything about the event, one page at a time.</p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-7">
-          {EXPLORE.map((item) => (
-            <Link key={item.to} to={item.to} className="group border-t border-border pt-4">
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-primary">
-                  {item.label}
-                </h3>
-                <item.icon className="h-5 w-5 shrink-0 text-muted-foreground/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-primary" />
-              </div>
-              <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-swift group-hover:grid-rows-[1fr]">
-                <div className="overflow-hidden">
-                  <p className="pt-2 pr-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
       {/* ===== Events marquee ===== */}
       <EventsMarquee />
     </div>
