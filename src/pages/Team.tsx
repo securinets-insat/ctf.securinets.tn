@@ -14,6 +14,7 @@ import team13 from "@/assets/malek-tabbabi.webp";
 import team14 from "@/assets/ouachani.webp";
 import team15 from "@/assets/graba.webp";
 import team16 from "@/assets/adem-marzouki.jpg";
+import team17 from "@/assets/jesser.jpg";
 
 import Reveal from "@/components/Reveal";
 import { Globe, Github, Linkedin, Youtube } from "lucide-react";
@@ -98,6 +99,13 @@ const MEMBERS = [
     role: "Web Exploitation",
     discord: "99lives",
     links: [{ href: "https://www.linkedin.com/in/youssef-abid-55a250295/", label: "LinkedIn", icon: Linkedin }],
+  },
+  {
+    photo: team17,
+    name: "Jasser Chebbi",
+    role: "Web Exploitation",
+    discord: "j3seer",
+    links: [{ href: "https://j3seer.github.io", label: "blog", icon: Globe }],
   },
   {
     photo: team11,
